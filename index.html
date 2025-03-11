@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GapTask | Todo Application</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-4" style="font-family: 'Space Mono', monospace;">
+  <main class="max-w-md w-full bg-gray-900 border border-white/10 rounded-lg shadow-lg overflow-hidden relative">
+    <!-- Header -->
+    <header class="p-6 border-b border-white/10 bg-gray-950 relative">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold tracking-wider hover:opacity-80">GAP<span class="text-gray-400">TASK</span></h1>
+        <div class="h-3 w-3 rounded-full bg-white animate-pulse"></div>
+      </div>
+      <div class="text-xs text-gray-400 mt-1">SYS.ID:Day2:://TODO-APP</div>
+      <div class="absolute -bottom-1 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+    </header>
+    
+    <!-- Input Form -->
+    <section class="p-6 border-b border-white/10">
+      <form class="flex gap-2">
+        <input type="text" placeholder="ADD NEW TASK" class="flex-grow bg-gray-800 border border-white/20 rounded px-4 py-2 text-sm focus:outline-none hover:border-white/40 focus:ring focus:ring-white focus:ring-opacity-50 transition-all duration-300">
+        <button type="submit" class="bg-white text-black px-4 py-2 rounded font-bold text-sm hover:bg-gray-300 transition-colors duration-300 flex items-center">
+          <i class="fas fa-plus mr-2"></i>ADD
+        </button>
+      </form>
+    </section>
+    
+    <!-- Task List -->
+    <section class="max-h-[350px] overflow-y-auto">
+      <ul class="p-6 space-y-4" aria-label="Task list">
+        <!-- Task Item 1 -->
+        <li class="opacity-100 flex items-center justify-between p-3 bg-gray-800 border border-white/10 rounded hover:border-white/30 transition-all duration-300 group"
+            style="animation: fadeIn 0.3s ease-out; animation-delay: 100ms;">
+          <div class="flex items-center">
+            <input type="checkbox" id="task1" class="mr-3 w-4 h-4 rounded border-white/30 focus:ring-white">
+            <label for="task1" class="text-sm group-hover:text-white transition-colors duration-200">Setup development environment</label>
+          </div>
+          <button class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Delete task">
+            <i class="fas fa-times"></i>
+          </button>
+        </li>
+        
+        <!-- Task Item 2 - Completed -->
+        <li class="opacity-100 flex items-center justify-between p-3 bg-gray-800 border border-white/10 rounded hover:border-white/30 transition-all duration-300 group"
+            style="animation: fadeIn 0.3s ease-out; animation-delay: 200ms;">
+          <div class="flex items-center">
+            <input type="checkbox" id="task2" checked class="mr-3 w-4 h-4 rounded border-white/30 focus:ring-white">
+            <label for="task2" class="text-sm line-through text-gray-500">Write code for Todo App</label>
+          </div>
+          <button class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Delete task">
+            <i class="fas fa-times"></i>
+          </button>
+        </li>
+        
+        <!-- Task Item 3 -->
+        <li class="opacity-100 flex items-center justify-between p-3 bg-gray-800 border border-white/10 rounded hover:border-white/30 transition-all duration-300 group"
+            style="animation: fadeIn 0.3s ease-out; animation-delay: 300ms;">
+          <div class="flex items-center">
+            <input type="checkbox" id="task3" class="mr-3 w-4 h-4 rounded border-white/30 focus:ring-white">
+            <label for="task3" class="text-sm group-hover:text-white transition-colors duration-200">Review and changes</label>
+          </div>
+          <button class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Delete task">
+            <i class="fas fa-times"></i>
+          </button>
+        </li>
+        
+        <!-- Task Item 4 -->
+        <li class="opacity-100 flex items-center justify-between p-3 bg-gray-800 border border-white/10 rounded hover:border-white/30 transition-all duration-300 group"
+            style="animation: fadeIn 0.3s ease-out; animation-delay: 400ms;">
+          <div class="flex items-center">
+            <input type="checkbox" id="task4" class="mr-3 w-4 h-4 rounded border-white/30 focus:ring-white">
+            <label for="task4" class="text-sm group-hover:text-white transition-colors duration-200">Publish app on Github Pages</label>
+          </div>
+          <button class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Delete task">
+            <i class="fas fa-times"></i>
+          </button>
+        </li>
+      </ul>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="p-4 bg-gray-950 text-gray-400 text-xs text-center border-t border-white/10">
+      <p>TASKS: 3 ACTIVE | 1 COMPLETED</p>
+      <div class="mt-2 flex justify-center gap-3">
+        <button class="hover:text-white transition-colors duration-200">ALL</button>
+        <button class="hover:text-white transition-colors duration-200">ACTIVE</button>
+        <button class="hover:text-white transition-colors duration-200">COMPLETED</button>
+      </div>
+    </footer>
+  </main>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</body>
+</html>
