@@ -33,61 +33,15 @@
     <!-- Task List -->
     <section class="max-h-[350px] overflow-y-auto">
       <ul class="p-6 space-y-4" aria-label="Task list">
-        <!-- Task Item 1 -->
-        <li class="opacity-100 flex items-center justify-between p-3 bg-gray-800 border border-white/10 rounded hover:border-white/30 transition-all duration-300 group"
-            style="animation: fadeIn 0.3s ease-out; animation-delay: 100ms;">
-          <div class="flex items-center">
-            <input type="checkbox" id="task1" class="mr-3 w-4 h-4 rounded border-white/30 focus:ring-white">
-            <label for="task1" class="text-sm group-hover:text-white transition-colors duration-200">Setup development environment</label>
-          </div>
-          <button class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Delete task">
-            <i class="fas fa-times"></i>
-          </button>
-        </li>
-        
-        <!-- Task Item 2 - Completed -->
-        <li class="opacity-100 flex items-center justify-between p-3 bg-gray-800 border border-white/10 rounded hover:border-white/30 transition-all duration-300 group"
-            style="animation: fadeIn 0.3s ease-out; animation-delay: 200ms;">
-          <div class="flex items-center">
-            <input type="checkbox" id="task2" checked class="mr-3 w-4 h-4 rounded border-white/30 focus:ring-white">
-            <label for="task2" class="text-sm line-through text-gray-500">Write code for Todo App</label>
-          </div>
-          <button class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Delete task">
-            <i class="fas fa-times"></i>
-          </button>
-        </li>
-        
-        <!-- Task Item 3 -->
-        <li class="opacity-100 flex items-center justify-between p-3 bg-gray-800 border border-white/10 rounded hover:border-white/30 transition-all duration-300 group"
-            style="animation: fadeIn 0.3s ease-out; animation-delay: 300ms;">
-          <div class="flex items-center">
-            <input type="checkbox" id="task3" class="mr-3 w-4 h-4 rounded border-white/30 focus:ring-white">
-            <label for="task3" class="text-sm group-hover:text-white transition-colors duration-200">Review and changes</label>
-          </div>
-          <button class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Delete task">
-            <i class="fas fa-times"></i>
-          </button>
-        </li>
-        
-        <!-- Task Item 4 -->
-        <li class="opacity-100 flex items-center justify-between p-3 bg-gray-800 border border-white/10 rounded hover:border-white/30 transition-all duration-300 group"
-            style="animation: fadeIn 0.3s ease-out; animation-delay: 400ms;">
-          <div class="flex items-center">
-            <input type="checkbox" id="task4" class="mr-3 w-4 h-4 rounded border-white/30 focus:ring-white">
-            <label for="task4" class="text-sm group-hover:text-white transition-colors duration-200">Publish app on Github Pages</label>
-          </div>
-          <button class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Delete task">
-            <i class="fas fa-times"></i>
-          </button>
-        </li>
+        <!-- Tasks will be dynamically added here by JavaScript -->
       </ul>
     </section>
     
     <!-- Footer -->
     <footer class="p-4 bg-gray-950 text-gray-400 text-xs text-center border-t border-white/10">
-      <p>TASKS: 3 ACTIVE | 1 COMPLETED</p>
+      <p>TASKS: 0 ACTIVE | 0 COMPLETED</p>
       <div class="mt-2 flex justify-center gap-3">
-        <button class="hover:text-white transition-colors duration-200">ALL</button>
+        <button class="text-white transition-colors duration-200">ALL</button>
         <button class="hover:text-white transition-colors duration-200">ACTIVE</button>
         <button class="hover:text-white transition-colors duration-200">COMPLETED</button>
       </div>
@@ -104,5 +58,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
+  <script src="script.js"></script>
 </body>
 </html>
